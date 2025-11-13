@@ -5,7 +5,7 @@ using namespace std;
 class game
 {
 public :
-    int r,user,round,computer,uscore=0,cscore=0;
+    int r,user,round,computer,uscore,cscore;
     string name;
     char k;
     void mygame()
@@ -13,6 +13,8 @@ public :
 
         do
         {
+             uscore=0,cscore=0;
+
             cout<< " ------- Name------------ "<<endl;
             cout<< " Enter your Name : ";
             cin>>name;
@@ -34,8 +36,11 @@ public :
                 cout<< " 1) Rock "<<endl;
                 cout<< " 2) Paper "<<endl;
                 cout<< " 3) Scissor "<<endl;
+
+
                   cout<< "select your choice : ";
                   cin>>user;
+                  cout<< "computer choice is : "<<computer<<endl;
                 switch(user)
                 {
 
@@ -96,8 +101,27 @@ public :
 
                   break;
                 default :
-                    cout<< "enter correct alternative : "<<endl;
+                    break;
                 }
+
+            }
+
+            cout<< "Total score user : "<< uscore<<endl;
+            cout<< "Total score computer : "<<cscore<<endl;
+
+            if(uscore>cscore)
+            {
+
+                cout<< "user win "<<endl;
+            }
+            else if(cscore>uscore)
+            {
+
+                cout<< "computer win "<<endl;
+            }
+            else
+            {
+                cout<< " Draw "<<endl;
             }
 
             cout<< " if you want to play again (y/n)? ";
