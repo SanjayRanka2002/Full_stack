@@ -104,7 +104,7 @@ public :
                     break;
                 }
 
-            }
+
 
             cout<< "Total score user : "<< uscore<<endl;
             cout<< "Total score computer : "<<cscore<<endl;
@@ -123,7 +123,7 @@ public :
             {
                 cout<< " Draw "<<endl;
             }
-
+            }
             cout<< " if you want to play again (y/n)? ";
             cin>>k;
         }while(k =='y' || k=='Y');
